@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <div class='marquee' style='overflow:hidden'>/ToDo_/ /ToDo_/ /ToDo_/ /ToDo_/ /ToDo_/ /ToDo_/ /ToDo_/ /ToDo_/ /ToDo_/ /ToDo_/ </div> -->
+    <div class="wrapper">
+        <header class="header">
+            <h1>ToDo list_</h1>
+        </header>
+        <main class="main">
+           
+            <div class="main__container">
+                <div class="todo__body">
+                    <div class="todo__forms">
+                        <input class="forms__new" placeholder="new task" type="text" >
+                        <div class="forms-user__container">
+                        <ul id=forms__user>
+                            <li><a href="#">select user <img src="images/expand_more.svg" alt=""></a>
+                              <ul class="modal__list">
+                              </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                    <a href="#" class="todo__button">Add task</a>
+                    <div class="todo__container">
+                        <ul class="todo__list">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
+
+    <script src="app.js"></script>
+    
+</body>
+
+</html>

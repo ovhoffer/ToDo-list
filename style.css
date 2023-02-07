@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    font-family: "Courier new", sans-serif;
+    color: rgba(115, 115, 115, 1);
+    list-style: none;
+ }
+ html {
+    height: 100%;
+ }
+ a {
+    text-decoration: none;
+    color: inherit;
+ }
+ 
+ body {
+    line-height: 1;
+    font-size: 16px;
+    color: #000;
+    background-color: #2A3065;
+    min-height: 100%;
+    position: relative;
+    
+ }
+
+ .marquee {
+   position: absolute;
+      color: #b2bada;
+      font-size: 40px;
+      top: 3%;
+   }
+
+ 
+ .main__container {
+   position: relative;
+   z-index: 10000;
+    max-width: 1300px;
+    margin: 0 auto;
+    box-sizing: content-box;
+
+ }
+ 
+
+.header {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+}
+
+.header h1 {
+   color: #B7D2EA;
+}
+.main {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+
+
+.todo__body {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   color: #707283;
+   padding: 55px;
+   background-color: #B7D2EA;
+   max-height: 400px;
+   max-width: 572px;
+}
+.todo__forms {
+   color: #707283;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   max-width: 100%;
+   
+}
+.forms__new {
+   color: #707283;
+   border: none;
+   background-color: #EBEBEB;
+   font-size: 29px;
+   margin: 0 0 10px 0;
+   padding: 5px;
+}
+.forms__new:active {
+   border: none;
+   text-decoration: none;
+}
+
+.forms__user span img {
+   transition: transform 0.7s ease-in-out;
+}
+
+
+
+#forms__user ul {
+   max-height: 120px;
+   overflow-y: scroll;
+ 
+}
+
+#forms__user {
+   display: inline-block;
+   list-style: none;
+   padding-left: 0;
+   margin: 0;
+
+   
+ }
+ #forms__user > li{
+   display: inline-block;  
+   position: relative;
+ }
+ #forms__user > li > a{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 375px;
+   color: #707283;
+   border: none;
+   background-color: #EBEBEB;
+   font-size: 28px;
+   margin: 0 0 0 0;
+   padding: 7px;
+   transition: background-color 0.25s, color 0.15s;
+ }
+ #forms__user > li > a:hover{
+   color: white;
+   background-color: rgb(123, 170, 209); 
+ }
+
+ #forms__user > li > a > img{
+   transition: transform 0.25s ease;
+ }
+
+ #forms__user > li > a:hover > img{
+   transform: rotate(180deg)
+ }
+ #forms__user > li:hover > ul a{
+   opacity: 1;
+ }
+ #forms__user > li:hover > ul li{
+   height: 40px;
+   opacity: 1;
+ }
+ .modal__list{
+   position: absolute;
+
+   top: 100%;
+   width: 389px;
+   left: 0;
+   list-style: none;
+   padding-left: 0;
+   text-align: left;
+   white-space: nowrap;
+   background-color: #EBEBEB;
+   
+ }
+ .modal__list > li{
+   height: 0;
+   opacity: 0;
+   transition: height 0.3s, opacity 0.4s;
+ }
+ .modal__list > li > a{
+   font-size: 17px;
+   display: flex;
+   flex: 1 1 100%;
+   padding: 15px 10px 16px 10px; 
+   color: inherit;
+   text-decoration: none; 
+   height: 10px;
+   overflow: hidden;
+   opacity: 0;
+   transition: height 0.4s, opacity 0.5s;
+ }
+
+
+ .modal__list > li > a:hover{
+   color: white;
+   background-color: rgb(113, 142, 167); 
+  
+ }
+
+
+
+.modal__list {
+   font-size: 29px;
+   color: #707283;
+
+}
+.modal__item {
+   margin: 5px 0;
+}
+
+
+
+.todo__button {
+   align-self: flex-end;
+   margin: 36px 0;
+   font-size: 25px;
+   color: #EBEBEB;
+   padding: 15px 10px;
+   background-color: #959EBE;
+   border-radius: 5px;
+   transition: 0.24s ease all ;
+}
+
+.todo__button:hover {
+   background-color: #4c667e;
+
+}
+
+.todo__button:active {
+   background-color: #3c5063;
+  
+}
+
+.todo__button:active {
+   background-color: #7093b4;
+   transition: 0.24s ease all ;
+}
+.todo__container {
+   align-self: center;
+   min-width: 100%;
+}
+.todo__list {
+   padding: 12px;
+   background-color: #F5F5F5;
+   max-height: 200px;
+   overflow-y: scroll;
+   padding: 20px;
+}
+
+.todo__list li{
+   display: grid;
+   grid-template-areas: 'icon title bin author';
+   grid-template-columns: 24px auto 24px 150px;
+   margin: 10px 0 10px 0;
+
+}
+
+.todo__list li p {
+   grid-area: title;
+   margin: -5px 15px 10px 15px;
+}
+
+.todo__list span {
+   margin: 0px 0px 0px 15px;
+}
+
+.todo__list .item__delete  {
+   max-width: 24px;
+}
+
+.box__untoggle {
+   opacity: 0;
+}
+
+.item__box  {
+   height: 24px;
+   width: 24px;
+   margin-top: -5px;
+   margin-left: 5px;
+   margin-right: 10px;
+   background-color: #a9bee9;
+
+}
+
+
+.box__toggle {
+   opacity: 1;
+}
+.item__text p {
+   font-size: small;
+}
+.item__delete img{
+   margin-top: -5px;
+   margin-left: 5px;
+   margin-right: 5px;
+}
+.item__author {
+   font-style: italic;
+}
