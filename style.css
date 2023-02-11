@@ -260,7 +260,10 @@
    opacity: 0;
 }
 
+
+
 .item__box  {
+   grid-area: icon;
    height: 24px;
    width: 24px;
    margin-top: -5px;
